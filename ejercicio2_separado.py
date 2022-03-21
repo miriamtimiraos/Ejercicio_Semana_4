@@ -3,7 +3,7 @@
 import datetime
 import re
 
-from clases_ej3 import EmpleadoFijo, EmpleadoTemporal
+from clases_ej2 import EmpleadoFijo, EmpleadoTemporal
 
 # Función de comprobación de fecha
 def comprobacion_fecha(fecha):
