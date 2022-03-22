@@ -2,6 +2,7 @@ import datetime
 
 # SUPERCLASE EMPLEADO
 class Empleado:
+    """Superclase Empleado"""
     def __init__(self, nif, nombre, fecha_nacimiento, sueldo_mensual):
         self.nif = nif
         self.nombre = nombre
@@ -22,6 +23,7 @@ class Empleado:
 
 # CLASE EMPLEADO TEMPORAL-->HEREDA DE LA SUPERCLASE EMPLEADO
 class EmpleadoTemporal(Empleado):
+    """Clase de Empleado Temporal"""
 
     tipo_empleado = "temporal"
 
@@ -43,6 +45,7 @@ class EmpleadoTemporal(Empleado):
 
 # CLASE EMPLEADO FIJO-->HEREDA DE LA SUPERCLASE EMPLEADO
 class EmpleadoFijo(Empleado):
+    """Clase de Empleado Fijo"""
 
     tipo_empleado = "fijo"
 

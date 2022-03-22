@@ -7,6 +7,7 @@ from clases_ej2 import EmpleadoFijo, EmpleadoTemporal
 
 # Función de comprobación de fecha
 def comprobacion_fecha(fecha):
+    """Función de comprobación de fecha."""
     dia, mes, año = fecha.split("/")
     dia = int(dia)
     mes = int(mes)
@@ -23,6 +24,7 @@ def comprobacion_fecha(fecha):
 
 # Función de comprobación de DNI
 def comprobacion_DNI(nif):
+    """Función de comprobación de DNI."""
     flag_error = False
     diccionario_dni = {
         0: "T",
@@ -66,10 +68,11 @@ def comprobacion_DNI(nif):
 
 # Función para añadir un empleado
 def añadir_empleado(diccionario):
+    """Función para añadir un empleado."""
     print("\nIntroduce los datos del empleado.\n")
     # Tipo de empleado
     tipo = input("Tipo de empleado (fijo/temporal): ")
-    while not ((tipo=="fijo" or tipo=="temporal")): #Es lo mismo que decir si no es temporal o fijo
+    while not ((tipo == "fijo" or tipo == "temporal")):  # Es lo mismo que decir si no es temporal o fijo
         tipo = input(
             "Error al introducir el tipo de empleado. Por favor, indique de nuevo el tipo de empleado (fijo/temporal): "
         )
@@ -121,6 +124,7 @@ def añadir_empleado(diccionario):
 
 # Función para eliminar un empleado
 def eliminar_empleado(diccionario):
+    """Función para eliminar un empleado."""
     nif = input("Introduce el nif del empleado que quieras borrar: ")
     if nif in diccionario:
         del diccionario[nif]
@@ -132,12 +136,14 @@ def eliminar_empleado(diccionario):
 
 # Función para mostrar los empleados
 def lista_empleados(diccionario):
+    """Función para mostrar los empleados."""
     for x in diccionario.values():
         print(f"{x.nif} {x.nombre} - {x.tipo_empleado}")
 
 
 # def detalle_de_un_empleado ():
 def detalle_de_un_empleado(diccionario):
+    """Definición detalle de un empleado."""
     nif = input("Introduce el NIF del empleado: ")
     if nif in diccionario:
         diccionario[nif].mostrar_datos()
@@ -147,6 +153,7 @@ def detalle_de_un_empleado(diccionario):
 
 # Función de gestión de la opción de indicar los empleados que es su cumpleaños
 def empleados_cumpleaños(diccionario):
+    """Función de gestión de la opción de indicar los empleados que es su cumpleaños."""
     mes = int(input("Introduce un mes (1-12): "))
     while (mes < 1) or (mes > 12):
         mes = int(input("Error, dato fuera de rango.\nIntroduce un mes (1-12): "))
@@ -160,6 +167,7 @@ def empleados_cumpleaños(diccionario):
 
 # Función de control e impresión del menú de slección
 def menu():
+    """Función de control e impresión del menú de slección."""
     # Mostrar las opciones
     print(
         """Menú de opciones:
@@ -180,6 +188,7 @@ def menu():
 
 # Main
 def main():
+    """Main."""
     # Diccionario vacío inicial de los empleados
     empleados = {}
     # Pedir una opción
